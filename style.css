@@ -1,0 +1,58 @@
+body {
+    overflow-x: hidden;
+}
+.sidebar {
+    background-color: #343a40;
+    min-height: 100vh;
+    padding-top: 1rem;
+}
+
+.sidebar a {
+    color: #ddd;
+    display: block;
+    padding: 0.75rem 1rem;
+    text-decoration: none;
+}
+
+.sidebar a:hover {
+    background-color: #495057;
+    color: #fff;
+}
+
+.sidebar .active {
+    background-color: #495057;
+}
+
+.content {
+    padding: 2rem;
+}
+
+@media (max-width: 767.98px) {
+    .sidebar {
+        position: fixed;
+        top: 0;
+        left: -220px;
+        width: 220px;
+        transition: all 0.3s;
+        z-index: 1031;
+    }
+
+    .sidebar.show {
+        left: 0;
+    }
+
+    .overlay {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        background: rgba(0, 0, 0, 0.5);
+        z-index: 1030;
+    }
+
+    .overlay.show {
+        display: block;
+    }
+}
